@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/article.dart';
-import 'package:news_app/detail_page.dart';
-import 'package:news_app/list_page.dart';
-import 'package:news_app/styles.dart';
+import 'package:news_app/data/model/article.dart';
+import 'package:news_app/ui/detail_page.dart';
+import 'package:news_app/ui/home_page.dart';
+import 'package:news_app/common/styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,9 +36,9 @@ class MyApp extends StatelessWidget {
                 onPrimary: Colors.black,
                 secondary: secondaryColor,
               )),
-      initialRoute: NewsListPage.routeName,
+      initialRoute: HomePage.routeName,
       routes: {
-        NewsListPage.routeName: (context) => NewsListPage(),
+        HomePage.routeName: (context) => HomePage(),
         ArticleDetailPage.routeName: (context) => ArticleDetailPage(
               article: ModalRoute.of(context)?.settings.arguments as Article,
             ),
