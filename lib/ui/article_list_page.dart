@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:news_app/data/model/article.dart';
 import 'package:news_app/widgets/platform_widget.dart';
 import 'package:news_app/ui/detail_page.dart';
-import 'package:news_app/common/styles.dart';
 
 class ArticleListPage extends StatelessWidget {
   const ArticleListPage({Key? key}) : super(key: key);
