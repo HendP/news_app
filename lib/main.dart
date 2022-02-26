@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/data/model/article.dart';
-import 'package:news_app/ui/detail_page.dart';
+import 'package:news_app/ui/article_detail_page.dart';
+import 'package:news_app/ui/article_web_view.dart';
 import 'package:news_app/ui/home_page.dart';
 import 'package:news_app/common/styles.dart';
 
@@ -27,7 +28,22 @@ class MyApp extends StatelessWidget {
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(0),
-                ),
+                ),class ArticleWebView extends StatelessWidget {
+              static const routeName = '/article_web';
+
+              final String url;
+
+              const ArticleWebView({required this.url});
+
+              @override
+              Widget build(BuildContext context) {
+              return CustomScaffold(
+              body: WebView(
+              initialUrl: url,
+              ),
+              );
+              }
+              }
               ),
             ),
           ),
